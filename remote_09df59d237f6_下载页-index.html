@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>隐盾 · 本地加密密码管理器</title>
+<meta name="description" content="隐盾是一款纯本地密码管理器：不联网、不上传、无后门、无备用钥匙。PBKDF2 25万次 + AES-256-GCM。">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  :root{--bg:#0d1117;--card:#161b22;--line:#242c37;--tx:#e6edf3;--dim:#8b949e;--ac:#3b82f6}
+  body{background:var(--bg);color:var(--tx);font:16px/1.7 -apple-system,"PingFang SC","Noto Sans SC",sans-serif;
+       padding:0 20px 60px;max-width:720px;margin:0 auto}
+  header{padding:56px 0 28px;text-align:center}
+  .logo{width:84px;height:84px;margin:0 auto 18px;border-radius:22px;background:linear-gradient(145deg,#3b82f6,#1e40af);
+        display:flex;align-items:center;justify-content:center;font-size:38px;box-shadow:0 12px 32px rgba(59,130,246,.28)}
+  h1{font-size:28px;letter-spacing:.5px}
+  .sub{color:var(--dim);font-size:14px;margin-top:8px}
+  .btns{margin:32px 0 8px;display:flex;flex-direction:column;gap:12px}
+  .btn{display:block;text-align:center;padding:16px;border-radius:14px;font-size:17px;font-weight:600;
+       text-decoration:none;background:var(--ac);color:#fff;border:1px solid transparent}
+  .btn:active{opacity:.82}
+  .btn.ghost{background:transparent;color:var(--tx);border-color:var(--line)}
+  .hint{text-align:center;color:var(--dim);font-size:13px;margin-top:10px}
+  h2{font-size:15px;color:var(--dim);font-weight:600;letter-spacing:1px;margin:40px 0 14px;text-transform:uppercase}
+  ul{list-style:none;display:grid;gap:10px}
+  li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+  li b{display:block;font-size:15px;margin-bottom:3px}
+  li span{color:var(--dim);font-size:13.5px;line-height:1.6}
+  .warn{background:#1c1a12;border:1px solid #3d3520;border-radius:14px;padding:14px 16px;color:#d9c88f;font-size:13.5px;line-height:1.7}
+  footer{margin-top:44px;text-align:center;color:var(--dim);font-size:12.5px;line-height:2}
+  footer a{color:var(--dim)}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">🛡</div>
+  <h1>隐盾</h1>
+  <div class="sub">纯本地加密密码管理器 · Android</div>
+</header>
+
+<div class="btns">
+  <a class="btn" href="https://github.com/hamiguaemoji/yindun/releases/latest">下载 APK</a>
+  <a class="btn ghost" href="https://github.com/hamiguaemoji/yindun">查看源码</a>
+</div>
+<div class="hint">安卓 7.0 及以上 · 约 X MB · 无需联网</div>
+
+<h2>它是什么</h2>
+<ul>
+  <li><b>数据只在你手机里</b><span>没有服务器，没有云同步，Manifest 里连联网权限都没有。</span></li>
+  <li><b>PBKDF2 25 万次 + AES-256-GCM</b><span>每次保存都生成新的随机 IV，主密码本身不会被存下来。</span></li>
+  <li><b>没有后门，没有备用钥匙</b><span>忘记主密码，开发者本人也救不回来。</span></li>
+  <li><b>密码生成器 · TOTP · 扫码录入</b><span>支持加密备份导出与 8 种主流密码管理器的 CSV 迁移。</span></li>
+</ul>
+
+<h2>注意</h2>
+<div class="warn">请定期导出加密备份并单独保存备份密码。设备丢失或卸载应用而没备份，数据无法恢复。</div>
+
+<footer>
+  独立开发 · 免费无广告<br>
+  Made by 哈密瓜EMOJI
+</footer>
+</body>
+</html>
